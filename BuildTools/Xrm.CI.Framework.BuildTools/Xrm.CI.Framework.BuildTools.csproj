@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.5\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -92,6 +93,18 @@
     <Content Include="Lib\VstsTaskSdk\0.10.0\TraceFunctions.ps1" />
     <Content Include="Lib\VstsTaskSdk\0.10.0\VstsTaskSdk.psd1" />
     <Content Include="Lib\VstsTaskSdk\0.10.0\VstsTaskSdk.psm1" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\Minimatch.dll" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\Strings\resources.resjson\de-de\resources.resjson" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\Strings\resources.resjson\en-US\resources.resjson" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\Strings\resources.resjson\es-es\resources.resjson" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\Strings\resources.resjson\fr-fr\resources.resjson" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\Strings\resources.resjson\it-IT\resources.resjson" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\Strings\resources.resjson\ja-jp\resources.resjson" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\Strings\resources.resjson\ko-KR\resources.resjson" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\Strings\resources.resjson\ru-RU\resources.resjson" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\Strings\resources.resjson\zh-CN\resources.resjson" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\Strings\resources.resjson\zh-TW\resources.resjson" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\VstsTaskSdk.dll" />
     <Content Include="Lib\xRMCIFramework\9.0.0\BackupOnlineInstance.ps1" />
     <Content Include="Lib\xRMCIFramework\9.0.0\DeleteOnlineInstance.ps1" />
     <Content Include="Lib\xRMCIFramework\9.0.0\DeployPackage.ps1" />
@@ -119,6 +132,21 @@
     <Content Include="Lib\xRMCIFramework\9.0.0\UpdatePluginAssembly.ps1" />
     <Content Include="Lib\xRMCIFramework\9.0.0\PluginRegistration.ps1" />
     <Content Include="Lib\xRMCIFramework\9.0.0\RemoveSolution.ps1" />
+    <Content Include="Lib\xRMCIFramework\9.0.0\UpdateSolutionDescriptionInCRM.ps1" />
+    <Content Include="GenerateTasksMD.ps1" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\FindFunctions.ps1" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\InputFunctions.ps1" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\LegacyFindFunctions.ps1" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\lib.json" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\LocalizationFunctions.ps1" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\LoggingCommandFunctions.ps1" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\LongPathFunctions.ps1" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\OutFunctions.ps1" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\ServerOMFunctions.ps1" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\ToolFunctions.ps1" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\TraceFunctions.ps1" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\VstsTaskSdk.psd1" />
+    <Content Include="Lib\VstsTaskSdk\0.11.0\VstsTaskSdk.psm1" />
     <None Include="packages.config" />
     <Content Include="Tasks\MSCRMBackupOnlineInstance\MSCRMBackupOnlineInstance.ps1" />
     <Content Include="Tasks\MSCRMBackupOnlineInstance\task.json" />
@@ -175,6 +203,25 @@
     <Content Include="Tasks\MSCRMServiceEndpointRegistration\task.json" />
     <Content Include="Tasks\MSCRMRemoveSolution\MSCRMRemoveSolution.ps1" />
     <Content Include="Tasks\MSCRMRemoveSolution\task.json" />
+    <Content Include="Tasks\MSCRMUpdateSolutionDescription\MSCRMUpdateSolutionDescription.ps1" />
+    <Content Include="Tasks\MSCRMUpdateSolutionDescription\task.json" />
+    <Content Include="Tasks\MSCRMCreateSolution\MSCRMCreateSolution.ps1" />
+    <Content Include="Tasks\MSCRMCreateSolution\task.json" />
+    <Content Include="Tasks\MSCRMCreatePatch\MSCRMCreatePatch.ps1" />
+    <Content Include="Tasks\MSCRMCreatePatch\task.json" />
+    <Content Include="Tasks\MSCRMCloneSolution\MSCRMCloneSolution.ps1" />
+    <Content Include="Tasks\MSCRMCloneSolution\task.json" />
+    <Content Include="Tasks\MSCRMImportSolutionsUsingConfig\MSCRMImportSolutionsUsingConfig.ps1" />
+    <Content Include="Tasks\MSCRMImportSolutionsUsingConfig\task.json" />
+    <Content Include="UpdateXrmCIFramework.ps1" />
+    <Content Include="Tasks\MSCRMExportSolutionsUsingConfig\MSCRMExportSolutionsUsingConfig.ps1" />
+    <Content Include="Tasks\MSCRMExportSolutionsUsingConfig\task.json" />
+    <Content Include="Tasks\MSCRMPackSolutionsUsingConfig\MSCRMPackSolutionsUsingConfig.ps1" />
+    <Content Include="Tasks\MSCRMPackSolutionsUsingConfig\task.json" />
+    <Content Include="Tasks\MSCRMGetSolutionMissingComponents\MSCRMGetSolutionMissingComponents.ps1" />
+    <Content Include="Tasks\MSCRMGetSolutionMissingComponents\task.json" />
+    <None Include="Tasks\MSCRMGetSolutionMissingDependencies\MSCRMGetSolutionMissingDependencies.ps1" />
+    <Content Include="Tasks\MSCRMGetSolutionMissingDependencies\task.json" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -312,7 +359,6 @@
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
-      <UserProperties Tasks_4MSCRMSplitPluginAssembly_4task_1json__JSONSchema="https://github.com/Microsoft/vsts-task-lib/blob/master/tasks.schema.json" />
     </VisualStudio>
   </ProjectExtensions>
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

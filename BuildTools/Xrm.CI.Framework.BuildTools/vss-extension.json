@@ -2,7 +2,7 @@
   "manifestVersion": 1,
   "id": "xrm-ci-framework-build-tasks",
   "name": "Dynamics 365 Build Tools",
-  "version": "9.2.8",
+  "version": "9.6.7",
   "publisher": "WaelHamze",
   "targets": [
     {
@@ -97,6 +97,9 @@
       "path": "Tasks/MSCRMPackageDeployer"
     },
     {
+      "path": "Tasks/MSCRMUpdateSolutionDescription"
+    },
+    {
       "path": "Tasks/MSCRMSetVersion"
     },
     {
@@ -137,6 +140,24 @@
     },
     {
       "path": "Tasks/MSCRMServiceEndpointRegistration"
+    },
+    {
+      "path": "Tasks/MSCRMCreateSolution"
+    },
+    {
+      "path": "Tasks/MSCRMCreatePatch"
+    },
+    {
+      "path": "Tasks/MSCRMCloneSolution"
+    },
+    {
+      "path": "Tasks/MSCRMImportSolutionsUsingConfig"
+    },
+    {
+      "path": "Tasks/MSCRMExportSolutionsUsingConfig"
+    },
+    {
+      "path": "Tasks/MSCRMPackSolutionsUsingConfig"
     }
   ],
   "contributions": [
@@ -238,6 +259,16 @@
       ],
       "properties": {
         "name": "Tasks/MSCRMSetVersion"
+      }
+    },
+    {
+      "id": "MSCRMUpdateSolutionDescription",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "Tasks/MSCRMUpdateSolutionDescription"
       }
     },
     {
@@ -398,6 +429,66 @@
       ],
       "properties": {
         "name": "Tasks/MSCRMServiceEndpointRegistration"
+      }
+    },
+    {
+      "id": "MSCRMCreateSolution",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "Tasks/MSCRMCreateSolution"
+      }
+    },
+    {
+      "id": "MSCRMCreatePatch",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "Tasks/MSCRMCreatePatch"
+      }
+    },
+    {
+      "id": "MSCRMCloneSolution",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "Tasks/MSCRMCloneSolution"
+      }
+    },
+    {
+      "id": "MSCRMExportSolutionsUsingConfig",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "Tasks/MSCRMExportSolutionsUsingConfig"
+      }
+    },
+    {
+      "id": "MSCRMImportSolutionsUsingConfig",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "Tasks/MSCRMImportSolutionsUsingConfig"
+      }
+    },
+    {
+      "id": "MSCRMPackSolutionsUsingConfig",
+      "type": "ms.vss-distributed-task.task",
+      "targets": [
+        "ms.vss-distributed-task.tasks"
+      ],
+      "properties": {
+        "name": "Tasks/MSCRMPackSolutionsUsingConfig"
       }
     }
   ]
